@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Crop Yield Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 Agricultural Crop Yield Scanner</h1>
+        
+        <!-- Step 1: Camera and Location -->
+        <div class="step active" id="step1">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Capture Field Image & Get Location
+            </div>
+            
+            <div class="camera-container">
+                <video id="video" autoplay></video>
+                <canvas id="canvas"></canvas>
+                <img id="capturedImage" class="captured-image" style="display: none;">
+            </div>
+            
+            <div class="controls">
+                <button onclick="startCamera()">📹 Start Camera</button>
+                <button onclick="captureImage()" id="captureBtn" disabled>📸 Capture Image</button>
+                <button onclick="getLocation()" id="locationBtn">📍 Get Location</button>
+            </div>
+            
+            <div id="locationStatus"></div>
+            <div id="locationInfo"></div>
+        </div>
+
+        <!-- Step 2: Weather Information -->
+        <div class="step" id="step2">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Weather & Rainfall Data
+            </div>
+            <div id="weatherStatus"></div>
+            <div id="weatherInfo"></div>
+        </div>
+
+        <!-- Step 3: Fertilizer Input -->
+        <div class="step" id="step3">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Agricultural Parameters
+            </div>
+            
+            <div class="input-group">
+                <label for="cropType">Crop Type:</label>
+                <select id="cropType">
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="corn">Corn</option>
+                    <option value="soybean">Soybean</option>
+                    <option value="cotton">Cotton</option>
+                    <option value="barley">Barley</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="fertilizerAmount">Fertilizer Amount (kg/hectare):</label>
+                <input type="number" id="fertilizerAmount" min="0" max="500" placeholder="Enter fertilizer amount">
+            </div>
+
+            <div class="input-group">
+                <label for="fieldSize">Field Size (hectares):</label>
+                <input type="number" id="fieldSize" min="0.1" max="1000" step="0.1" placeholder="Enter field size">
+            </div>
+
+            <button onclick="predictYield()" id="predictBtn" disabled>🔮 Predict Crop Yield</button>
+        </div>
+
+        <!-- Step 4: Results -->
+        <div class="step" id="step4">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Yield Prediction Results
+            </div>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
