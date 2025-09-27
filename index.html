@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>🌾 Agricultural Crop Yield Scanner</h1>
+        <h1>Agricultural Crop Yield Scanner</h1>
         
-        <!-- Step 1: Camera and Location -->
+        <!-- Scaner and Location -->
         <div class="step active" id="step1">
             <div class="step-title">
                 <span class="step-number">1</span>
@@ -24,16 +24,16 @@
             </div>
             
             <div class="controls">
-                <button onclick="startCamera()">📹 Start Camera</button>
-                <button onclick="captureImage()" id="captureBtn" disabled>📸 Capture Image</button>
-                <button onclick="getLocation()" id="locationBtn">📍 Get Location</button>
+                <button onclick="startCamera()">Start Camera</button>
+                <button onclick="captureImage()" id="captureBtn" disabled>Capture Image</button>
+                <button onclick="getLocation()" id="locationBtn">Get Location</button>
             </div>
             
             <div id="locationStatus"></div>
             <div id="locationInfo"></div>
         </div>
 
-        <!-- Step 2: Weather Information -->
+        <!-- Weather Information -->
         <div class="step" id="step2">
             <div class="step-title">
                 <span class="step-number">2</span>
@@ -43,7 +43,7 @@
             <div id="weatherInfo"></div>
         </div>
 
-        <!-- Step 3: Fertilizer Input -->
+        <!--Fertilizer Input -->
         <div class="step" id="step3">
             <div class="step-title">
                 <span class="step-number">3</span>
@@ -72,10 +72,10 @@
                 <input type="number" id="fieldSize" min="0.1" max="1000" step="0.1" placeholder="Enter field size">
             </div>
 
-            <button onclick="predictYield()" id="predictBtn" disabled>🔮 Predict Crop Yield</button>
+            <button onclick="predictYield()" id="predictBtn" disabled>Predict Crop Yield</button>
         </div>
 
-        <!-- Step 4: Results -->
+        <!-- Results -->
         <div class="step" id="step4">
             <div class="step-title">
                 <span class="step-number">4</span>

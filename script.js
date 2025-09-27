@@ -3,7 +3,7 @@ let currentLocation = null;
 let weatherData = null;
 let capturedImageData = null;
 
-// Camera functionality
+// Camera fnality
 async function startCamera() {
     try {
         const video = document.getElementById('video');
@@ -43,7 +43,7 @@ function captureImage() {
     showStatus('Image captured successfully!', 'success');
 }
 
-// Location functionality
+// Location fnality
 function getLocation() {
     const locationBtn = document.getElementById('locationBtn');
     locationBtn.innerHTML = '<span class="loading"></span>Getting Location...';
@@ -63,7 +63,7 @@ function getLocation() {
             
             document.getElementById('locationInfo').innerHTML = `
                 <div class="info-card">
-                    <h3>📍 Location Captured</h3>
+                    <h3>Location Captured</h3>
                     <p><strong>Latitude:</strong> ${currentLocation.lat.toFixed(6)}</p>
                     <p><strong>Longitude:</strong> ${currentLocation.lon.toFixed(6)}</p>
                     <p><strong>Accuracy:</strong> ${position.coords.accuracy.toFixed(0)} meters</p>
@@ -80,7 +80,7 @@ function getLocation() {
             document.getElementById('step2').classList.add('active');
         },
         error => {
-            locationBtn.innerHTML = '📍 Get Location';
+            locationBtn.innerHTML = 'Get Location';
             locationBtn.disabled = false;
             showStatus('Location access denied or failed.', 'error');
             console.error('Location error:', error);
@@ -107,35 +107,35 @@ async function getWeatherData() {
 
         document.getElementById('weatherInfo').innerHTML = `
             <div class="info-card">
-                <h3>🌤️ Weather & Environmental Data</h3>
+                <h3>Weather & Environmental Data</h3>
                 <div class="weather-info">
                     <div class="weather-item">
-                        <div style="font-size: 1.5em;">🌡️</div>
+                        <div style="font-size: 1.5em;"></div>
                         <div><strong>${weatherData.temperature}°C</strong></div>
                         <div>Temperature</div>
                     </div>
                     <div class="weather-item">
-                        <div style="font-size: 1.5em;">💧</div>
+                        <div style="font-size: 1.5em;"></div>
                         <div><strong>${weatherData.humidity}%</strong></div>
                         <div>Humidity</div>
                     </div>
                     <div class="weather-item">
-                        <div style="font-size: 1.5em;">🌧️</div>
+                        <div style="font-size: 1.5em;"></div>
                         <div><strong>${weatherData.rainfall}mm</strong></div>
                         <div>Monthly Rainfall</div>
                     </div>
                     <div class="weather-item">
-                        <div style="font-size: 1.5em;">🌱</div>
+                        <div style="font-size: 1.5em;"></div>
                         <div><strong>${weatherData.soilMoisture}%</strong></div>
                         <div>Soil Moisture</div>
                     </div>
                     <div class="weather-item">
-                        <div style="font-size: 1.5em;">💨</div>
+                        <div style="font-size: 1.5em;"></div>
                         <div><strong>${weatherData.windSpeed} km/h</strong></div>
                         <div>Wind Speed</div>
                     </div>
                     <div class="weather-item">
-                        <div style="font-size: 1.5em;">☀️</div>
+                        <div style="font-size: 1.5em;"></div>
                         <div><strong>${weatherData.uvIndex}</strong></div>
                         <div>UV Index</div>
                     </div>
@@ -175,13 +175,13 @@ function predictYield() {
         
         resultsDiv.innerHTML = `
             <div class="result-card">
-                <h3>🌾 Predicted Crop Yield</h3>
+                <h3>Predicted Crop Yield</h3>
                 <div class="result-value">${prediction.yieldPerHectare} tons/ha</div>
                 <p><strong>Total Expected Yield:</strong> ${prediction.totalYield} tons</p>
                 <p><strong>Confidence Level:</strong> ${prediction.confidence}%</p>
                 
                 <div style="margin-top: 20px; text-align: left;">
-                    <h4>📊 Analysis Factors:</h4>
+                    <h4>Analysis Factors:</h4>
                     <ul style="margin-top: 10px;">
                         <li><strong>Crop Type:</strong> ${cropType.charAt(0).toUpperCase() + cropType.slice(1)}</li>
                         <li><strong>Fertilizer Impact:</strong> ${prediction.fertilizerImpact}</li>
@@ -191,7 +191,7 @@ function predictYield() {
                 </div>
                 
                 <div style="margin-top: 20px;">
-                    <h4>💡 Recommendations:</h4>
+                    <h4>Recommendations:</h4>
                     <p style="text-align: left; margin-top: 10px;">${prediction.recommendations}</p>
                 </div>
             </div>

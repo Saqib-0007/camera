@@ -1,3 +1,5 @@
+# README FILE FOR CAMERA MODULE
+
 # Camera Module
 
 This module provides functionality for camera integration and image processing.
