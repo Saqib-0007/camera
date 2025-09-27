@@ -5,12 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultural Crop Yield Scanner</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 🌱 Navbar Styling */
+        .navbar {
+            background-color: #2e757d; /* green theme */
+            padding: 20px;
+            margin: 20px;
+
+            border-radius: 10px;
+            gap: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #c8e6c9;
+        }
+    </style>
 </head>
 <body>
+    <!-- 🌱 Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Crop Yield Scanner</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🌱 Main Content -->
+    <h1>Agricultural Crop Yield Scanner</h1>
     <div class="container">
         <h1>Agricultural Crop Yield Scanner</h1>
         
-        <!-- Scaner and Location -->
+        <!-- Scanner and Location -->
         <div class="step active" id="step1">
             <div class="step-title">
                 <span class="step-number">1</span>
@@ -43,7 +100,7 @@
             <div id="weatherInfo"></div>
         </div>
 
-        <!--Fertilizer Input -->
+        <!-- Fertilizer Input -->
         <div class="step" id="step3">
             <div class="step-title">
                 <span class="step-number">3</span>
